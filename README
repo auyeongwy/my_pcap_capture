@@ -1,0 +1,13 @@
+Simple reference code that demonstrates use of the libpcap library.
+
+To conmpile, check Makefile to confirm availability of libpcap files. Then just perform make.
+
+To run,
+
+my_pcap_capture file <filename>
+Loop though packets in a pcap file.
+
+OR
+
+my_pcap_capture live <interface>
+Listen on an interface capturing packets.
