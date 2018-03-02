@@ -14,7 +14,7 @@ limitations under the License.
  */
 
 
-/** @file err_processor.h
+/** @file mpc_output.h
  * Implements functions to perform output functions. Note this version is not thread-safe.
  */
 
