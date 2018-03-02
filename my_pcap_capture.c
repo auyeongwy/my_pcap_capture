@@ -31,7 +31,7 @@ limitations under the License.
 #include <string.h>
 
 #include "options_processor.h"
-#include "err_processor.h"
+#include "mpc_output.h"
 
 
 static struct s_options v_options; /**< Contains option parameters tat configure the application. */

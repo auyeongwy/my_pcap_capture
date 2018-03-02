@@ -14,12 +14,12 @@ limitations under the License.
  */
 
 
-/** @file err_processor.c
- * Implements functions to process error messages. Note this version is not thread-safe.
+/** @file mpc_output.c
+ * Implements functions to perform output functions. Note this version is not thread-safe.
  */
 
 #include <string.h>
-#include "err_processor.h"
+#include "mpc_output.h"
 
 #define ERR_MSG_LEN 128 /**< Error message buffer length. */
 static char v_err_msg[ERR_MSG_LEN]; /**< Error message buffer. */
