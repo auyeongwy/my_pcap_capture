@@ -25,12 +25,27 @@ limitations under the License.
 /** Set an error message in the error buffer. Note that this can be overwritten if it is called again.
  * @p_msg Message to write in the error buffer.
  */
-void set_err_msg(const char *p_msg);
+void set_err_msg(const char *const __restrict__ p_msg);
+
+/** Concatenate text to the error message in the error buffer. 
+ * @p_msg Message to concatenate to the error buffer.
+ */
+void concat_err_msg(const char *const __restrict__ p_msg);
 
 /** Get the error message in the error buffer.
  *  @return Error message in the error buffer.
  */
 char* get_err_msg();
+
+/** Errno was set so get write the error message into the error buffer.
+ *  @param p_header Any message to insert in front of the errno error message. Set to NULL if none.
+ */
+void set_errno_msg(const char *const __restrict__ p_header);
+
+
+/** Print whatever is in the error buffer. Once this is called the buffer empties.
+ */
+void print_err();
 
 
 #endif

@@ -70,6 +70,7 @@ int main(int argc, char *argv[])
 		fprintf(stderr, get_err_msg());
 		return -1;
 	}
+	//printf("Options: %s\n", v_options.options);
 
 	if(v_options.capture_type == FILE_CAPTURE) /* */
 		process_file();

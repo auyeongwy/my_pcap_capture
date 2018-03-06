@@ -34,6 +34,7 @@ enum
 struct s_options {
 	int capture_type; /**< Indicates a capture type. See enum above. */
 	char target[256]; /**< Capture target. File path of interface name. */
+	char options[256]; /**< Options string. */
 };
 
 /** Process parameters from the command line and initialize configuration options. Also examines configuration for errors.
@@ -42,7 +43,7 @@ struct s_options {
  * @p_options Configuration options will be written into this structure.
  * @return 0 if success. Else -1, and an error message will be written to the error buffer. Use get_err_msg() to retrieve.
  */
-int process_params(const int p_argc, char *const p_argv[], struct s_options *const p_options);
+int process_params(const int p_argc, char *const p_argv[], struct s_options *p_options);
 
 
 #endif
