@@ -43,7 +43,7 @@ struct s_options {
  * @p_options Configuration options will be written into this structure.
  * @return 0 if success. Else -1, and an error message will be written to the error buffer. Use get_err_msg() to retrieve.
  */
-int process_params(const int p_argc, char *const p_argv[], struct s_options *p_options);
+int process_params(const int p_argc, char *const p_argv[], struct s_options *const __restrict__ p_options);
 
 
 #endif

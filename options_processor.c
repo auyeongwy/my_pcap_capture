@@ -33,14 +33,14 @@ limitations under the License.
 /** Read keyvalues of the form key=value from the options file.
  *  @param p_ptions Options structure where the values will be filled.
  */
-static int read_options_file(struct s_options *__restrict__ p_options);
+static int read_options_file(struct s_options *const __restrict__ p_options);
 
 /** Read all key values of the form key=value from the provided buffer.
  *  @param p_buffer Buffer to read the keyvalues from.
  *  @param p_ptions Options structure where the values will be filled.
  *  @return 0 if success. Else -1.
  */
-static int read_key_values(char *__restrict__ p_buffer, struct s_options *__restrict__ p_options);
+static int read_key_values(char *__restrict__ p_buffer, struct s_options *const __restrict__ p_options);
 
 /** Read a specific value from a key of the form key=value from the provided buffer using a regex expression.
  *  @param p_buffer The buffer to read the key-vaue from.
@@ -53,7 +53,7 @@ static int read_key_value(char *__restrict__ p_buffer, const char *__restrict__ 
 
 
 
-int process_params(const int p_argc, char *const p_argv[], struct s_options *p_options)
+int process_params(const int p_argc, char *const p_argv[], struct s_options *const __restrict__ p_options)
 {
 	int tmp; 
 	
@@ -89,7 +89,7 @@ int process_params(const int p_argc, char *const p_argv[], struct s_options *p_o
 
 
 
-static int read_options_file(struct s_options *__restrict__ p_options)
+static int read_options_file(struct s_options *const __restrict__ p_options)
 {
 	struct stat stat_buf;
 	char *file_buf = NULL;
@@ -124,7 +124,7 @@ do_exit:
 
 
 
-static int read_key_values(char *__restrict__ p_buffer, struct s_options *__restrict__ p_options)
+static int read_key_values(char *__restrict__ p_buffer, struct s_options *const __restrict__ p_options)
 {
 	int ret;
 	
