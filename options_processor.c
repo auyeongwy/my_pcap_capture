@@ -146,6 +146,7 @@ static int read_key_value(char *__restrict__ p_buffer, const char *__restrict__ 
 	char *char_ptr;
 	
 
+	p_value[0] = 0; /* Zero the buffer first. */
 	if((ret = regcomp(&re, p_regex, REG_EXTENDED)) != 0) { /* Compile the regex expression. */
 		set_err_msg("Regcomp error\n");
 		ret = -1;
